@@ -1,0 +1,36 @@
+name: uartly
+title: UARTly
+base: core22
+version: '1.0'
+
+summary: Advanced UART Serial Terminal
+description: |
+  UARTly is a modern, feature-rich serial terminal and logger for UART debugging.
+  Features include real-time log viewing, log filtering, interactive terminal,
+  configurable baud rates, and theme switching.
+
+grade: stable
+confinement: strict
+
+license: MIT
+
+architectures:
+  - build-on: amd64
+
+apps:
+  uartly:
+    command: bin/uartly
+    extensions: [gnome]
+    plugs:
+      - raw-usb
+      - hardware-observe
+      - network
+
+parts:
+  uartly:
+    plugin: python
+    source: ..
+    build-packages:
+      - python3-tk
+    stage-packages:
+      - python3-tk
