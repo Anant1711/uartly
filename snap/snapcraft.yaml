@@ -23,6 +23,10 @@ apps:
   uartly:
     command: bin/uartly
     extensions: [gnome]
+    environment:
+      PYTHONPATH: $SNAP/usr/lib/python3/dist-packages:$SNAP/usr/lib/python3.10:$SNAP/usr/lib/python3.10/lib-dynload:$PYTHONPATH
+      TCL_LIBRARY: $SNAP/usr/share/tcltk/tcl8.6
+      TK_LIBRARY: $SNAP/usr/share/tcltk/tk8.6
     plugs:
       - raw-usb
       - hardware-observe
@@ -34,5 +38,9 @@ parts:
     source: .
     build-packages:
       - python3-tk
+      - tk-dev
+      - tcl-dev
     stage-packages:
       - python3-tk
+      - tk
+      - tcl
