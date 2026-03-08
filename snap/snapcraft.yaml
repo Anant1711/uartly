@@ -14,6 +14,8 @@ confinement: strict
 
 license: MIT
 
+icon: snap/gui/uartly.png
+
 architectures:
   - build-on: amd64
   - build-on: arm64
@@ -22,6 +24,7 @@ architectures:
 apps:
   uartly:
     command: bin/uartly
+    desktop: usr/share/applications/uartly.desktop
     extensions: [gnome]
     environment:
       PYTHONPATH: $SNAP/usr/lib/python3/dist-packages:$SNAP/usr/lib/python3.10:$SNAP/usr/lib/python3.10/lib-dynload:$PYTHONPATH
