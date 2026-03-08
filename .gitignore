@@ -6,3 +6,5 @@ build/
 *.snap
 *.egg
 .venv/
+*.txt
+!requirements.txt
