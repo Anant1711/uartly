@@ -14,7 +14,7 @@ confinement: strict
 
 license: MIT
 
-icon: snap/gui/uartly.png
+icon: snap/gui/URTly.png
 
 architectures:
   - build-on: amd64

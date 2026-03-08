@@ -2,7 +2,7 @@
 Name=UARTly
 Comment=Advanced UART Serial Terminal
 Exec=uartly
-Icon=${SNAP}/meta/gui/uartly.png
+Icon=${SNAP}/meta/gui/URTly.png
 Terminal=false
 Type=Application
 Categories=Development;Utility;
