@@ -29,7 +29,7 @@ apps:
 parts:
   uartly:
     plugin: python
-    source: ..
+    source: .
     build-packages:
       - python3-tk
     stage-packages:
