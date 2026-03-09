@@ -38,6 +38,9 @@ parts:
   uartly:
     plugin: python
     source: .
+    build-environment:
+      - PATH: $SNAPCRAFT_PART_INSTALL/usr/bin:$PATH
+      - PYTHONPATH: $SNAPCRAFT_PART_INSTALL/usr/lib/python3/dist-packages:$PYTHONPATH
     build-packages:
       - python3-tk
       - tk-dev
