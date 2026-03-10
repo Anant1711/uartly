@@ -33,6 +33,8 @@ apps:
       - raw-usb
       - hardware-observe
       - network
+      - udisks2
+      - serial-port
 
 parts:
   uartly:
