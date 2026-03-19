@@ -10,7 +10,7 @@ description: |
   configurable baud rates, and theme switching.
 
 grade: stable
-confinement: classic
+confinement: strict
 
 license: MIT
 
@@ -29,6 +29,12 @@ apps:
       PYTHONPATH: $SNAP/usr/lib/python3/dist-packages:$SNAP/usr/lib/python3.10:$SNAP/usr/lib/python3.10/lib-dynload:$PYTHONPATH
       TCL_LIBRARY: $SNAP/usr/share/tcltk/tcl8.6
       TK_LIBRARY: $SNAP/usr/share/tcltk/tk8.6
+    plugs:
+      - raw-usb
+      - hardware-observe
+      - network
+      - udisks2
+      - serial-port
 
 parts:
   uartly:
